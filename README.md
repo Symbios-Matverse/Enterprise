@@ -33,7 +33,7 @@ The Omega Gateway model combines epistemic strength (`ψ`), latency (`θ`), and 
 ## Project Structure
 ```
 ./src/matverse/omega_gateway.py  # Core Omega, QCVaR, governance, antifragility, and validator logic
-./test_omega_gateway.py          # Pytest suite covering calculations and history handling
+./tests/test_omega_gateway.py    # Pytest suite covering calculations and history handling
 ```
 
 ## Installation
@@ -46,7 +46,7 @@ pip install -U pip
 pip install -r requirements.txt  # if available
 ```
 
-If `requirements.txt` is not present, no additional dependencies are required for the library itself. The tests optionally use `numpy` for mean calculations but will fall back to a lightweight stub if it is absent.
+If `requirements.txt` is not present, no additional dependencies are required for the library or the tests.
 
 ## Usage
 Import the helpers from `matverse.omega_gateway`.
@@ -104,6 +104,9 @@ health = validator.get_system_health()
 summary = validator.get_validation_summary()
 print(health)
 print(summary["latest"])
+
+# Clear the sliding window and start fresh
+validator.reset()
 ```
 
 The validator:
