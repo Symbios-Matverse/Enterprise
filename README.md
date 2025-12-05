@@ -33,7 +33,7 @@ The Omega Gateway model combines epistemic strength (`ψ`), latency (`θ`), and 
 ## Project Structure
 ```
 ./src/matverse/omega_gateway.py  # Core Omega, QCVaR, governance, antifragility, and validator logic
-./test_omega_gateway.py          # Pytest suite covering calculations and history handling
+./tests/test_omega_gateway.py    # Pytest suite covering calculations and history handling
 ```
 
 ## Installation
